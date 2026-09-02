@@ -18,6 +18,22 @@ public class Student {
     this.activated = true;
   }
 
+  public void activate() {
+    if (this.activated) {
+      throw new IllegalArgumentException("이미 활성화된 학생입니다.");
+    }
+
+    this.activated = true;
+  }
+
+  public void deactivate() {
+    if (!this.activated) {
+      throw new IllegalArgumentException("이미 비활성화된 학생입니다.");
+    }
+
+    this.activated = false;
+  }
+
   public String getName() {
     return name;
   }
